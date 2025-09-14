@@ -68,7 +68,7 @@ export default function BannerSection() {
                 <span>Money-back guaranteed</span>
               </div>
               <div className="flex items-center gap-2">
-                <span><Star/></span>
+                <span><Star</span>
                 <span>Satisfaction guaranteed</span>
               </div>
             </div>

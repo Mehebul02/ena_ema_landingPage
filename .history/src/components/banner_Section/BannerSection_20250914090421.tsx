@@ -4,21 +4,54 @@ import type React from "react"
 import * as Label from "@radix-ui/react-label"
 import * as Separator from "@radix-ui/react-separator"
 
+import { useState } from "react"
+import { Button } from "@radix-ui/themes"
 import { TrustBadge } from "./Trust_Badge"
 import Image from "next/image"
 import { logo } from "@/assets"
 import Container from "../Container"
 
 // Import icons
-
-import FormSection from "./FormSection"
-import { Lock, Star } from "lucide-react"
+import { User, Mail, Phone } from "lucide-react"
 
 export default function BannerSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  })
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  })
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
 
+    const newErrors = {
+      name: formData.name ? "" : "Please enter your name",
+      email: formData.email
+        ? formData.email.includes("@")
+          ? ""
+          : "Please enter a valid email"
+        : "Please enter your email",
+      phone: formData.phone ? "" : "Please enter your phone number",
+    }
 
+    setErrors(newErrors)
 
+    if (!newErrors.name && !newErrors.email && !newErrors.phone) {
+      console.log("Form submitted:", formData)
+    }
+  }
+
+  const handleInputChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }))
+    if (errors[field as keyof typeof errors]) {
+      setErrors((prev) => ({ ...prev, [field]: "" }))
+    }
+  }
 
   return (
     <div className="relative min-h-[1289px] w-full bg-[#151E1B] text-white font-manrope p-2 overflow-hidden">
@@ -26,7 +59,7 @@ export default function BannerSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[816px] h-[252px] bg-[#1FFFA5] opacity-20 blur-[351px] rounded-full" />
 
       {/* Main Content */}
-      <Container className={"relative z-10"}>
+      <Container>
         <div className="relative z-10">
           {/* Header */}
           <header className="flex justify-center pt-14 pb-32">
@@ -53,14 +86,14 @@ export default function BannerSection() {
             </div>
 
             {/* Form */}
-           <FormSection/>
+           <Fro
 
             <Separator.Root className="bg-gray-600 h-px w-full max-w-md mx-auto my-8" />
 
             {/* Trust Indicators */}
             <div className="flex justify-center items-center gap-8 mt-12 text-sm text-gray-300">
               <div className="flex items-center gap-2">
-                <span><Lock /></span>
+                <span>🔒</span>
                 <span>SSL secure</span>
               </div>
               <div className="flex items-center gap-2">
@@ -68,7 +101,7 @@ export default function BannerSection() {
                 <span>Money-back guaranteed</span>
               </div>
               <div className="flex items-center gap-2">
-                <span><Star/></span>
+                <span>⭐</span>
                 <span>Satisfaction guaranteed</span>
               </div>
             </div>

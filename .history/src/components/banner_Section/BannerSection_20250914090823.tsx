@@ -12,7 +12,7 @@ import Container from "../Container"
 // Import icons
 
 import FormSection from "./FormSection"
-import { Lock, Star } from "lucide-react"
+import { Lock } from "lucide-react"
 
 export default function BannerSection() {
 
@@ -68,7 +68,7 @@ export default function BannerSection() {
                 <span>Money-back guaranteed</span>
               </div>
               <div className="flex items-center gap-2">
-                <span><Star/></span>
+                <span><Start</span>
                 <span>Satisfaction guaranteed</span>
               </div>
             </div>

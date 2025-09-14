@@ -12,7 +12,6 @@ import Container from "../Container"
 // Import icons
 
 import FormSection from "./FormSection"
-import { Lock, Star } from "lucide-react"
 
 export default function BannerSection() {
 
@@ -60,7 +59,7 @@ export default function BannerSection() {
             {/* Trust Indicators */}
             <div className="flex justify-center items-center gap-8 mt-12 text-sm text-gray-300">
               <div className="flex items-center gap-2">
-                <span><Lock /></span>
+                <span><lock /></span>
                 <span>SSL secure</span>
               </div>
               <div className="flex items-center gap-2">
@@ -68,7 +67,7 @@ export default function BannerSection() {
                 <span>Money-back guaranteed</span>
               </div>
               <div className="flex items-center gap-2">
-                <span><Star/></span>
+                <span>⭐</span>
                 <span>Satisfaction guaranteed</span>
               </div>
             </div>
