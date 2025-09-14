@@ -1,0 +1,12 @@
+import trust from "./icons/trust.png"
+import logo from "./logo/Logo.png"
+import image1 from "./projects/image1.png"
+import image2 from "./projects/image2.png"
+
+export { 
+    trust,
+     logo,
+     image1,
+     image2
+    
+    }

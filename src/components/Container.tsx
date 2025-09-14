@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { twMerge } from "tailwind-merge";
 
 
-const Container= ({ children, className }) => {
+const Container= ({ children, className }:any) => {
   return (
     <div className={twMerge("max-w-[1440px] mx-auto px-4 lg:px-0", className)}>
       {children}

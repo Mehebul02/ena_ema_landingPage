@@ -13,6 +13,7 @@ import Container from "../Container"
 
 import FormSection from "./FormSection"
 import { Lock, Star } from "lucide-react"
+import ProductImageSlider from "../products/Product_Section"
 
 export default function BannerSection() {
 
@@ -74,6 +75,8 @@ export default function BannerSection() {
             </div>
           </div>
         </div>
+        {/* image slider  */}
+        <ProductImageSlider/>
       </Container>
     </div>
   )
