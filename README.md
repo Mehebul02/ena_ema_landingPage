@@ -1,7 +1,5 @@
 # Landing Page Conversion - Next.js
 
-This project is a **pixel-perfect Next.js landing page** converted from a Figma design. It supports **desktop, tablet, and mobile views**.
-
 ## Tech Stack
 - **Next.js** - React framework for SSR and SSG
 - **Tailwind CSS / Custom CSS** - Styling
