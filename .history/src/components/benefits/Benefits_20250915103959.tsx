@@ -83,7 +83,7 @@ const iconVariants = {
 const Benefits = () => {
   return (
     <div className="bg-[#151E1B] font-manrope">
-      <CustomTitle className="flex justify-center w-full mx-auto text-center "
+      <CustomTitle className="flex justify-center w-full mx-auto text-center mt-8"
         title="Why Businesses"
         middleText="Trust Us"
         lastTest="With Their Designs"

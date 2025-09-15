@@ -1,7 +1,8 @@
 "use client"
+
+
+import { Check, ArrowRight } from "lucide-react"
 import CustomTitle from "../CustomeTitle"
-import PricingCard from "./PricingCard"
-import SpecialOffer from "./SpecialOffer"
 
 const plans = [
     {
@@ -47,9 +48,8 @@ export default function PricingSection() {
             <div className="relative max-w-6xl mx-auto">
             <CustomTitle className="bg-[#0A0F0D] flex justify-start" title="Simple, Transparent Pricing — " middleText="Choose Your Plan" description="No hidden fees, no surprises. Just premium landing pages at unbeatable prices." />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-                    {plans.map((plan, index) => <PricingCard key={index} plan={plan} index={index} />)}
+                    {plans.map((plan, index) => <PricingCard)}
                 </div>
-            <SpecialOffer/>
             </div>
         </div>
     )

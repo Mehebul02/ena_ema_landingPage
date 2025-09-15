@@ -1,7 +1,6 @@
 "use client"
 import CustomTitle from "../CustomeTitle"
 import PricingCard from "./PricingCard"
-import SpecialOffer from "./SpecialOffer"
 
 const plans = [
     {
@@ -49,7 +48,6 @@ export default function PricingSection() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
                     {plans.map((plan, index) => <PricingCard key={index} plan={plan} index={index} />)}
                 </div>
-            <SpecialOffer/>
             </div>
         </div>
     )
