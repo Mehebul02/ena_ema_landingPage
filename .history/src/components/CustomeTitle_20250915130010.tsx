@@ -1,4 +1,4 @@
-//@typescript-eslint/no-explicit-any'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any'
 
 import React from 'react';
 import { twMerge } from 'tailwind-merge';

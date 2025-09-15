@@ -1,7 +1,9 @@
 "use client"
 
 import type React from "react"
+
 import * as Separator from "@radix-ui/react-separator"
+
 import { TrustBadge } from "./Trust_Badge"
 import Image from "next/image"
 import { logo } from "@/assets"

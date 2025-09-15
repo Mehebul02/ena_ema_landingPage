@@ -1,4 +1,3 @@
-//@typescript-eslint/no-explicit-any'
 
 import React from 'react';
 import { twMerge } from 'tailwind-merge';

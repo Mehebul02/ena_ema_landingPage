@@ -1,10 +1,8 @@
 import BannerSection from "@/components/banner_Section/BannerSection";
 import Benefits from "@/components/benefits/Benefits";
 import CaseStudiesSection from "@/components/case_studies/Case_Studies";
-import { FAQSection } from "@/components/faq/FaqSection";
 import PricingSection from "@/components/pricing/Pricing";
 import { ProcessSection } from "@/components/process/Process";
-import { ReviewsSection } from "@/components/reviews/Reviews";
 
 
 export default function Home() {
@@ -15,8 +13,8 @@ export default function Home() {
       <CaseStudiesSection/>
       <PricingSection/>
       <ProcessSection/>
-      <ReviewsSection/>
-      <FAQSection/>
+      <
+   
     </div>
   );
 }
